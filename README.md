@@ -1,166 +1,251 @@
-# keibaAI v1
+# 🐎 Keiba_WS - 競馬AI予測システム開発ワークスペース
 
-## 概要
+## 📋 プロジェクト概要
 
-このプロジェクトでは、レースデータを基に予測モデルをトレーニングし、複数の機械学習アルゴリズムを組み合わせてアンサンブル学習を行う。具体的には、**ランダムフォレスト** (Random Forest) と **LightGBM** (Light Gradient Boosting Machine) を使い、これらの予測結果を基に **メタモデル** を学習させる。最終的に、複数のモデルの評価結果（AUC、精度など）を可視化し、最も優れたモデルを選択する。
+Keiba_WSは、機械学習を活用した競馬予測システムの研究開発プロジェクトです。従来のアンサンブル学習アプローチ（v1）から、リアルタイムデータスクレイピングによる実用的予測システム（v2）まで、段階的な技術進化を記録しています。
 
-コードの全体的な動作や使い方を説明する。
+### 🎯 プロジェクトの目標
 
-## 今回の評価結果
-* Ensemble Meta Model Evaluation Results
-    - AUC (Train): 0.8705
-    - AUC (Test): 0.8054
-    - Accuracy (Test): 0.7970
-    
-* Summary of All Models
-    * RandomForest
-        - AUC (Test): 0.7978
-        - Accuracy (Test): 0.7340
-    * LightGBM
-        - AUC (Test): 0.8050
-        - Accuracy (Test): 0.7218
-    * Ensemble Meta Model
-        - AUC (Test): 0.8054
-        - Accuracy (Test): 0.7970
+- 📊 **高精度予測**: 機械学習による競馬結果の高精度予測
+- 💰 **実用性**: 実際の投資判断に活用可能なシステム
+- 🔬 **研究開発**: 予測モデルの継続的改善と新技術検証
+- 📈 **収益性**: 実証された投資収益の実現
 
+---
 
-## 必要なライブラリ
+## 🏗️ プロジェクト構成
 
-以下のライブラリが必要：
-
-- `pandas`
-- `numpy`
-- `joblib`
-- `matplotlib`
-- `scikit-learn`
-- `lightgbm`
-
-<!-- これらのライブラリは、`requirements.txt` に記載しておくと便利です。 -->
-
-## ファイル構成
-
-- `main.py`: メインの実行スクリプト。データの前処理からモデルの学習、評価、保存までを行う。
-- `results_data/`: モデルの評価結果（AUC、精度）や可視化されたグラフを保存するディレクトリ。
-- `best_model/`: 学習したモデル（ランダムフォレスト、LightGBM、メタモデル）を保存するディレクトリ。
-- `RaceResults_and_RaceInfo.pickle`: 入力データファイル（レース結果やレース情報が含まれている）。
-
-
-
-<!-- # 評価結果とROC曲線が以下のフォルダに保存される： -->
 ```
-.
-└── keibaAI-v1
-    ├── JupyterNotebook_src/ (not use)
-    ├── Practice_src/ (not use)
-    └── python_src/ (here)
-        ├── latest_src
-        │   ├── main.py
-        │   ├── best_model/
-        │   └── results_data/
-        │       ├── rf_results.md
-        │       ├── lgb_results.md
-        │       ├── ensemble_results.md
-        │       ├── rf_roc_curve.png
-        │       ├── lgb_roc_curve.png
-        │       ├── ensemble_roc_curve.png
-        │       ├── rf_feature_importance.png
-        │       ├── lgb_feature_importance.png
-        │       └── ensemble_feature_importance.png
-        └── RaceResults_and_RaceInfo.pickle (2019)
+Keiba_WS/
+├── README.md                    # プロジェクト全体概要（本ファイル）
+├── .venv/                       # 共通Python仮想環境
+├── keibaAI-v1/                  # 第1世代：アンサンブル学習システム
+│   ├── README.md                # v1詳細ドキュメント
+│   ├── JupyterNotebook_src/     # 探索的データ分析
+│   ├── Practice_src/            # 学習・実験用ノートブック
+│   └── python_src/              # メイン実装
+│       ├── main.py              # 実行スクリプト
+│       ├── latest_src/          # 最新実装
+│       └── RaceResults_and_RaceInfo.pickle
+└── keibaAI-v2/                  # 第2世代：リアルタイム予測システム
+    ├── README.md                # v2詳細ドキュメント
+    ├── main.ipynb               # メイン実行ノートブック
+    ├── horse_racing_ai_prediction.ipynb
+    ├── horse_racing_ai_prediction_real_data.ipynb
+    ├── horse_racing_ai_user_guide.md
+    └── .venv/                   # v2専用環境
 ```
 
+---
 
-## 使用方法
+## 🚀 各バージョンの特徴
 
-### 1. データの前処理とモデルの学習
+### 📊 keibaAI-v1: アンサンブル学習システム
 
-- `RaceResults_and_RaceInfo.pickle` ファイルにレース結果データを保存する。
-- スクリプト `main.py` を実行すると、データの前処理、学習、評価が順番に実行される。
+**🎯 特徴**
+- **アンサンブル学習**: RandomForest + LightGBM + メタモデル
+- **高精度**: AUC 0.8054, 精度 79.7%を達成
+- **詳細分析**: 特徴量重要度、ROC曲線による性能評価
+- **モデル保存**: 学習済みモデルの永続化
+
+**📈 実績**
+- **AUC (Test)**: 0.8054
+- **Accuracy (Test)**: 79.7%
+- **モデル**: RandomForest, LightGBM, Ensemble Meta Model
+
+**🔧 技術スタック**
+- scikit-learn, LightGBM
+- pandas, numpy
+- matplotlib (可視化)
+
+### 🌐 keibaAI-v2: リアルタイム予測システム
+
+**🎯 特徴**
+- **リアルタイム性**: netkeiba.comからの即座のデータ取得
+- **実用性**: 当日レースの投資判断支援
+- **高収益**: **収益率193.1%を実証**
+- **ユーザビリティ**: 詳細なユーザーガイド完備
+
+**📈 実績**
+- **収益率**: 193.1%達成
+- **リアルタイム対応**: 当日レース分析
+- **投資戦略**: 確率ベース期待値最適化
+
+**🔧 技術スタック**
+- requests, BeautifulSoup4 (スクレイピング)
+- LightGBM (予測モデル)
+- Jupyter Notebook (対話型開発)
+
+---
+
+## 🏁 クイックスタート
+
+### 🚀 全体環境セットアップ
 
 ```bash
-cd python_src/latest_src/
+# リポジトリのクローン
+git clone [repository-url]
+cd Keiba_WS
+
+# 共通仮想環境の作成
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+
+# 基本ライブラリのインストール
+pip install pandas numpy matplotlib seaborn scikit-learn lightgbm
+```
+
+### 🎯 v1を試す（アンサンブル学習）
+
+```bash
+cd keibaAI-v1/python_src/latest_src/
 python main.py
 ```
 
-### 2. モデルの学習
-スクリプト内で、以下の2つのモデルを学習させる：
+### 🌐 v2を試す（リアルタイム予測）
 
-ランダムフォレスト (RandomForestClassifier)
-LightGBM (LGBMClassifier)
-これらのモデルは、X_train と y_train を使って学習され、モデル評価のためにテストデータ (X_test, y_test) を使用する。
+```bash
+cd keibaAI-v2/
+# Jupyter Notebookを起動
+jupyter notebook main.ipynb
+```
 
-### 3. メタモデルの作成
-ランダムフォレストとLightGBMの出力を使って、ロジスティック回帰 をメタモデルとして訓練する。このメタモデルは、両方のモデルからの予測結果を基に最終的な予測を行う。
+---
 
-### 4. モデル評価
-各モデル（ランダムフォレスト、LightGBM、メタモデル）の評価が行われ、評価指標（AUC、精度）が計算される。評価結果は results_data/ フォルダ内に保存され、model_results.md に記録される。
+## 📖 詳細ドキュメント
 
-### 5. 可視化
-ROC曲線が各モデルについて描画され、results_data/ に保存される。
-特徴量重要度（上位20の特徴量）はバーグラフとして表示され、results_data/ に保存される。
+### 📚 各バージョンの詳細
 
-**主な関数の説明**
-* RaceDataProcessor
-    * データのロード、前処理、学習データとテストデータへの分割を行う。
-* ModelTrainer
-    * モデルの学習、評価（AUC、精度）、ROC曲線の描画、およびモデルの保存を行う。
-* MetaModelTrainer
-    * ランダムフォレストとLightGBMの予測をメタモデルに渡し、最終的な予測を行うために学習する。
-* plot_feature_importance
-    * 特徴量の重要度を可視化する。上位20の特徴量を表示し、その結果を results_data/ に保存する。
+| バージョン | README | 主な用途 | 推奨レベル |
+|-----------|---------|----------|-----------|
+| **v1** | [keibaAI-v1/README.md](keibaAI-v1/README.md) | 機械学習モデル研究 | 中級〜上級 |
+| **v2** | [keibaAI-v2/README.md](keibaAI-v2/README.md) | 実用的予測・投資判断 | 初級〜中級 |
 
-**保存される結果**
-* 評価結果
-    * 各モデルのAUC、テスト精度、訓練精度などの結果が results_data/ フォルダ内の .md ファイルに保存される。
-* ROC曲線
-    * 各モデルのROC曲線が画像（PNG）として results_data/ に保存される。
-* 特徴量重要度
-    * 上位20の特徴量の重要度がバーグラフとして可視化され、画像（PNG）として保存される。
+### 🎓 学習パス
 
-* 結果の可視化
-    * 各モデルの評価結果は、results_data/ フォルダに以下のように保存される：
+1. **初心者**: keibaAI-v2から開始 → ユーザーガイド熟読
+2. **中級者**: v1でモデル理論学習 → v2で実践活用
+3. **上級者**: 両バージョンの技術比較 → 独自改良
 
-**保存結果一覧**
-* rf_results.md: ランダムフォレストモデルの評価結果
+---
 
-* lgb_results.md: LightGBMモデルの評価結果
+## 🔍 技術的進化
 
-* ensemble_results.md: メタモデルの評価結果
+### v1 → v2 の主な改善点
 
-* rf_roc_curve.png: ランダムフォレストのROC曲線
+| 観点 | v1 | v2 | 改善効果 |
+|------|----|----|----------|
+| **データ取得** | 静的データ（2019年） | リアルタイムスクレイピング | 🔄 最新データ対応 |
+| **予測精度** | AUC 0.8054 | 収益率193.1% | 💰 実用性向上 |
+| **ユーザビリティ** | コマンドライン | Jupyter + ガイド | 📖 使いやすさ向上 |
+| **実用性** | 研究用途 | 投資判断支援 | 🎯 実戦対応 |
 
-* lgb_roc_curve.png: LightGBMのROC曲線
+### 🚀 次世代への展望
 
-* ensemble_roc_curve.png: メタモデルのROC曲線
+- **v3構想**: ディープラーニング統合
+- **API化**: Web API提供
+- **自動化**: 自動投票システム
+- **多様化**: 複数競馬サイト対応
 
-* rf_feature_importance.png: ランダムフォレストの特徴量重要度
+---
 
-* lgb_feature_importance.png: LightGBMの特徴量重要度
+## 🛠️ 開発環境
 
-* ensemble_feature_importance.png: メタモデルの特徴量重要度
+### 必要な環境
 
-**結果の解釈**
-* AUC (Test) や Accuracy (Test) はモデルの性能を示し、モデルがどれだけ良い予測をしているかを測定する。
+- **Python**: 3.8以上
+- **OS**: Windows, macOS, Linux
+- **メモリ**: 4GB以上推奨
+- **ストレージ**: 2GB以上
 
-* ROC曲線は、モデルの真陽性率（TPR）と偽陽性率（FPR）を示し、モデルの分類性能を視覚的に確認できます。
+### 主要ライブラリ
 
-* 特徴量重要度の可視化では、最も重要な特徴量を確認し、モデルがどの特徴を重視して予測を行っているかを把握できます。
+```
+# 共通
+pandas>=1.3.0
+numpy>=1.21.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+scikit-learn>=1.0.0
+lightgbm>=3.2.0
 
-# 今後の改善点
-より多くのモデル（XGBoostやSVMなど）を追加して、アンサンブルモデルを改善する。
-データの前処理や特徴量エンジニアリングをさらに洗練させることで、モデルの精度を向上を図る。
-深層学習モデル（LSTM, CNNなど）を導入し、時系列データの分析を行う。
-特徴量エンジニアリングを高度化し、より精度の高い予測モデルを構築する。
+# v2追加
+requests>=2.25.0
+beautifulsoup4>=4.9.0
+lxml>=4.6.0
+jupyter>=1.0.0
+```
 
-# ライセンス
-MIT License
+---
 
+## ⚠️ 重要な注意事項
 
+### 免責事項
 
+- 🎓 **教育目的**: 本プロジェクトは教育・研究目的で開発されています
+- 🔒 **投資リスク**: 投資判断は自己責任で行ってください
+- 📊 **過去実績**: 過去の成績は将来の結果を保証しません
+- ⚖️ **法的遵守**: 各種利用規約・法令を遵守してください
 
+### 利用上の注意
 
+- **データ取得**: netkeiba.comの利用規約を遵守
+- **スクレイピング**: 適切な間隔でのアクセス
+- **モデル更新**: 定期的なモデル再学習を推奨
+- **リスク管理**: 投資額は余裕資金の範囲内で
 
+---
 
-<!-- 今後の展望
-深層学習モデル（LSTM, CNNなど）を導入し、時系列データの分析を行う。
-特徴量エンジニアリングを高度化し、より精度の高い予測モデルを構築する。 -->
+## 🤝 コントリビューション
+
+### 貢献方法
+
+1. **Issue報告**: バグや改善提案
+2. **機能追加**: 新機能の実装
+3. **ドキュメント**: 説明文書の充実
+4. **テスト**: 品質向上への貢献
+
+### 開発ガイドライン
+
+- **ブランチ戦略**: feature/機能名 でブランチ作成
+- **コードスタイル**: PEP8準拠
+- **コミット**: 明確なコミットメッセージ
+- **テスト**: 適切なテスト実装
+
+---
+
+## 📊 プロジェクト統計
+
+| 項目 | v1 | v2 | 合計 |
+|------|----|----|------|
+| **ファイル数** | 15+ | 10+ | 25+ |
+| **コード行数** | 500+ | 1000+ | 1500+ |
+| **ノートブック** | 3 | 4 | 7 |
+| **ドキュメント** | 1 | 2 | 3 |
+
+---
+
+## 📞 サポート・連絡先
+
+- **GitHub Issues**: バグ報告・機能要望
+- **GitHub Discussions**: 技術的質問・議論
+- **プロジェクト管理者**: ken-hori-2
+
+---
+
+## 📄 ライセンス
+
+このプロジェクトはMITライセンスの下で公開されています。
+
+詳細は各サブプロジェクトのライセンスファイルをご確認ください。
+
+---
+
+## 🏆 謝辞
+
+本プロジェクトの開発にあたり、オープンソースコミュニティの皆様に感謝いたします。
+
+---
+
+*Last updated: 2025年8月7日*  
+*Project maintained by: ken-hori-2*
