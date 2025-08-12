@@ -1,0 +1,777 @@
+{
+  "timestamp": "20250807_210028",
+  "performance_metrics": {
+    "train_auc": 0.8726648257126954,
+    "val_auc": 0.715307018111776,
+    "train_accuracy": 0.8439860546194073,
+    "val_accuracy": 0.7815223707147008,
+    "train_precision": 0.8053549747587705,
+    "val_precision": 0.5035885167464115,
+    "train_recall": 0.3797800210938677,
+    "val_recall": 0.2029893924783028,
+    "train_f1": 0.5161567760167096,
+    "val_f1": 0.2893470790378007,
+    "train_size": 151448,
+    "val_size": 37862,
+    "n_features": 186,
+    "best_iteration": 807
+  },
+  "feature_importance": [
+    {
+      "feature": "jockey_id",
+      "importance": 87006.31907081604
+    },
+    {
+      "feature": "horse_id",
+      "importance": 82629.4489159584
+    },
+    {
+      "feature": "peds_1",
+      "importance": 33482.189765930176
+    },
+    {
+      "feature": "peds_5",
+      "importance": 24677.50375199318
+    },
+    {
+      "feature": "peds_29",
+      "importance": 21024.208155870438
+    },
+    {
+      "feature": "peds_61",
+      "importance": 19355.18544769287
+    },
+    {
+      "feature": "peds_60",
+      "importance": 16131.374147415161
+    },
+    {
+      "feature": "peds_13",
+      "importance": 14867.872835874557
+    },
+    {
+      "feature": "peds_28",
+      "importance": 11317.568960905075
+    },
+    {
+      "feature": "peds_0",
+      "importance": 10806.687643885612
+    },
+    {
+      "feature": "peds_59",
+      "importance": 9601.378544092178
+    },
+    {
+      "feature": "peds_12",
+      "importance": 8101.294901847839
+    },
+    {
+      "feature": "馬番",
+      "importance": 7130.086926832795
+    },
+    {
+      "feature": "体重",
+      "importance": 6966.2604499310255
+    },
+    {
+      "feature": "rank_5R",
+      "importance": 6614.290548875928
+    },
+    {
+      "feature": "年齢",
+      "importance": 6290.9560588896275
+    },
+    {
+      "feature": "peds_27",
+      "importance": 5694.912934541702
+    },
+    {
+      "feature": "year",
+      "importance": 5015.988187640905
+    },
+    {
+      "feature": "peds_4",
+      "importance": 4847.096279263496
+    },
+    {
+      "feature": "peds_57",
+      "importance": 4674.992383480072
+    },
+    {
+      "feature": "枠番",
+      "importance": 4484.035030275583
+    },
+    {
+      "feature": "体重変化",
+      "importance": 4267.257741421461
+    },
+    {
+      "feature": "course_len",
+      "importance": 3739.1324541717768
+    },
+    {
+      "feature": "rank_9R",
+      "importance": 3600.9023037552834
+    },
+    {
+      "feature": "peds_25",
+      "importance": 3373.4268729686737
+    },
+    {
+      "feature": "peds_11",
+      "importance": 3353.1233582496643
+    },
+    {
+      "feature": "peds_53",
+      "importance": 3188.273954153061
+    },
+    {
+      "feature": "prize_5R",
+      "importance": 2903.8621493577957
+    },
+    {
+      "feature": "斤量",
+      "importance": 2767.032427445054
+    },
+    {
+      "feature": "peds_52",
+      "importance": 2527.846716403961
+    },
+    {
+      "feature": "peds_56",
+      "importance": 2288.9571952819824
+    },
+    {
+      "feature": "prize_9R",
+      "importance": 2134.424935862422
+    },
+    {
+      "feature": "rank_course_len_allR",
+      "importance": 1873.3827762752771
+    },
+    {
+      "feature": "peds_3",
+      "importance": 1722.0459991693497
+    },
+    {
+      "feature": "peds_9",
+      "importance": 1720.018085718155
+    },
+    {
+      "feature": "prize_allR",
+      "importance": 1670.7613118588924
+    },
+    {
+      "feature": "rank_allR",
+      "importance": 1663.6560027599335
+    },
+    {
+      "feature": "prize_course_len_5R",
+      "importance": 1443.1697659492493
+    },
+    {
+      "feature": "peds_58",
+      "importance": 1405.5152497291565
+    },
+    {
+      "feature": "peds_21",
+      "importance": 1393.88623213768
+    },
+    {
+      "feature": "peds_51",
+      "importance": 1390.1629967689514
+    },
+    {
+      "feature": "prize_course_len_allR",
+      "importance": 1324.540276914835
+    },
+    {
+      "feature": "peds_44",
+      "importance": 1317.358368396759
+    },
+    {
+      "feature": "interval",
+      "importance": 1304.5848595499992
+    },
+    {
+      "feature": "rank_course_len_9R",
+      "importance": 1122.8912711441517
+    },
+    {
+      "feature": "diff_9R",
+      "importance": 1112.577204734087
+    },
+    {
+      "feature": "diff_5R",
+      "importance": 1112.2295994013548
+    },
+    {
+      "feature": "prize_course_len_9R",
+      "importance": 1111.668643385172
+    },
+    {
+      "feature": "peds_24",
+      "importance": 1104.5527032613754
+    },
+    {
+      "feature": "peds_45",
+      "importance": 1082.2964317798615
+    },
+    {
+      "feature": "diff_course_len_allR",
+      "importance": 1033.725488781929
+    },
+    {
+      "feature": "first_corner_course_len_allR",
+      "importance": 958.3776045441628
+    },
+    {
+      "feature": "ground_state_良",
+      "importance": 861.0884321331978
+    },
+    {
+      "feature": "weather_晴",
+      "importance": 827.9081058502197
+    },
+    {
+      "feature": "final_corner_9R",
+      "importance": 798.1792487502098
+    },
+    {
+      "feature": "final_corner_5R",
+      "importance": 797.3719959557056
+    },
+    {
+      "feature": "rank_course_len_5R",
+      "importance": 796.5569790899754
+    },
+    {
+      "feature": "diff_course_len_5R",
+      "importance": 765.1317541003227
+    },
+    {
+      "feature": "final_corner_course_len_9R",
+      "importance": 760.1860528737307
+    },
+    {
+      "feature": "first_corner_course_len_5R",
+      "importance": 741.3988454341888
+    },
+    {
+      "feature": "diff_course_len_9R",
+      "importance": 736.4820129275322
+    },
+    {
+      "feature": "diff_allR",
+      "importance": 734.0463433265686
+    },
+    {
+      "feature": "final_to_rank_allR",
+      "importance": 708.7059648633003
+    },
+    {
+      "feature": "final_corner_course_len_allR",
+      "importance": 691.0112079977989
+    },
+    {
+      "feature": "first_to_final_9R",
+      "importance": 678.3332287073135
+    },
+    {
+      "feature": "final_corner_course_len_5R",
+      "importance": 674.1037682294846
+    },
+    {
+      "feature": "final_to_rank_course_len_allR",
+      "importance": 663.5109387636185
+    },
+    {
+      "feature": "weather_曇",
+      "importance": 659.4800567030907
+    },
+    {
+      "feature": "first_corner_course_len_9R",
+      "importance": 652.7809112668037
+    },
+    {
+      "feature": "final_corner_allR",
+      "importance": 615.3230933845043
+    },
+    {
+      "feature": "first_to_final_allR",
+      "importance": 588.1122899055481
+    },
+    {
+      "feature": "final_to_rank_course_len_5R",
+      "importance": 583.9899377822876
+    },
+    {
+      "feature": "peds_20",
+      "importance": 578.9024224281311
+    },
+    {
+      "feature": "first_to_rank_5R",
+      "importance": 578.4165679514408
+    },
+    {
+      "feature": "first_to_final_5R",
+      "importance": 573.2899198532104
+    },
+    {
+      "feature": "first_corner_allR",
+      "importance": 569.6567664295435
+    },
+    {
+      "feature": "first_corner_5R",
+      "importance": 567.1752595603466
+    },
+    {
+      "feature": "peds_26",
+      "importance": 565.9491295814514
+    },
+    {
+      "feature": "race_type_芝",
+      "importance": 557.5088031291962
+    },
+    {
+      "feature": "first_corner_9R",
+      "importance": 547.6409538090229
+    },
+    {
+      "feature": "final_to_rank_5R",
+      "importance": 535.1881148517132
+    },
+    {
+      "feature": "first_to_rank_course_len_allR",
+      "importance": 534.4291616678238
+    },
+    {
+      "feature": "first_to_rank_allR",
+      "importance": 513.0986507236958
+    },
+    {
+      "feature": "peds_55",
+      "importance": 500.1846663951874
+    },
+    {
+      "feature": "final_to_rank_course_len_9R",
+      "importance": 483.2595816850662
+    },
+    {
+      "feature": "first_to_rank_course_len_9R",
+      "importance": 480.14831778407097
+    },
+    {
+      "feature": "first_to_rank_course_len_5R",
+      "importance": 477.6440330147743
+    },
+    {
+      "feature": "first_to_rank_9R",
+      "importance": 475.5969537496567
+    },
+    {
+      "feature": "peds_50",
+      "importance": 474.4823782444
+    },
+    {
+      "feature": "first_to_final_course_len_9R",
+      "importance": 466.061731338501
+    },
+    {
+      "feature": "first_to_final_course_len_allR",
+      "importance": 463.61506229639053
+    },
+    {
+      "feature": "final_to_rank_9R",
+      "importance": 459.13565638661385
+    },
+    {
+      "feature": "peds_43",
+      "importance": 447.14756059646606
+    },
+    {
+      "feature": "race_type_ダート",
+      "importance": 441.51729422807693
+    },
+    {
+      "feature": "rank_race_type_5R",
+      "importance": 435.5848487019539
+    },
+    {
+      "feature": "diff_race_type_5R",
+      "importance": 406.4360210299492
+    },
+    {
+      "feature": "ground_state_稍重",
+      "importance": 387.8971801996231
+    },
+    {
+      "feature": "prize_race_type_9R",
+      "importance": 385.459480881691
+    },
+    {
+      "feature": "prize_race_type_5R",
+      "importance": 374.8408804535866
+    },
+    {
+      "feature": "peds_40",
+      "importance": 337.458664894104
+    },
+    {
+      "feature": "first_to_final_course_len_5R",
+      "importance": 336.00397300720215
+    },
+    {
+      "feature": "prize_race_type_allR",
+      "importance": 330.5570913553238
+    },
+    {
+      "feature": "diff_race_type_9R",
+      "importance": 324.93961131572723
+    },
+    {
+      "feature": "rank_race_type_allR",
+      "importance": 310.20118033885956
+    },
+    {
+      "feature": "race_type_障害",
+      "importance": 302.22309279441833
+    },
+    {
+      "feature": "peds_41",
+      "importance": 285.3125696182251
+    },
+    {
+      "feature": "rank_race_type_9R",
+      "importance": 281.81333112716675
+    },
+    {
+      "feature": "peds_8",
+      "importance": 255.90694999694824
+    },
+    {
+      "feature": "diff_race_type_allR",
+      "importance": 248.55767506361008
+    },
+    {
+      "feature": "peds_42",
+      "importance": 234.00050973892212
+    },
+    {
+      "feature": "final_to_rank_race_type_5R",
+      "importance": 227.10270035266876
+    },
+    {
+      "feature": "peds_10",
+      "importance": 220.04453897476196
+    },
+    {
+      "feature": "性_牝",
+      "importance": 215.71725815534592
+    },
+    {
+      "feature": "final_to_rank_race_type_9R",
+      "importance": 214.22889065742493
+    },
+    {
+      "feature": "性_牡",
+      "importance": 197.63055038452148
+    },
+    {
+      "feature": "first_to_final_race_type_allR",
+      "importance": 181.05790948867798
+    },
+    {
+      "feature": "final_corner_race_type_9R",
+      "importance": 177.66510927677155
+    },
+    {
+      "feature": "peds_19",
+      "importance": 177.0033097267151
+    },
+    {
+      "feature": "first_corner_race_type_5R",
+      "importance": 173.012140750885
+    },
+    {
+      "feature": "peds_18",
+      "importance": 163.73766994476318
+    },
+    {
+      "feature": "final_corner_race_type_5R",
+      "importance": 161.61855959892273
+    },
+    {
+      "feature": "peds_23",
+      "importance": 160.0003399848938
+    },
+    {
+      "feature": "first_to_final_race_type_9R",
+      "importance": 159.21518898010254
+    },
+    {
+      "feature": "final_to_rank_race_type_allR",
+      "importance": 154.19999957084656
+    },
+    {
+      "feature": "peds_37",
+      "importance": 144.25996160507202
+    },
+    {
+      "feature": "first_corner_race_type_allR",
+      "importance": 140.32675749063492
+    },
+    {
+      "feature": "first_to_rank_race_type_5R",
+      "importance": 139.8800094127655
+    },
+    {
+      "feature": "first_corner_race_type_9R",
+      "importance": 133.07103806734085
+    },
+    {
+      "feature": "peds_49",
+      "importance": 127.85233974456787
+    },
+    {
+      "feature": "peds_36",
+      "importance": 125.57886981964111
+    },
+    {
+      "feature": "final_corner_race_type_allR",
+      "importance": 119.31100964546204
+    },
+    {
+      "feature": "first_to_final_race_type_5R",
+      "importance": 115.50360000133514
+    },
+    {
+      "feature": "first_to_rank_race_type_9R",
+      "importance": 112.1759901046753
+    },
+    {
+      "feature": "peds_39",
+      "importance": 102.57038927078247
+    },
+    {
+      "feature": "peds_48",
+      "importance": 78.11366939544678
+    },
+    {
+      "feature": "peds_54",
+      "importance": 76.58376049995422
+    },
+    {
+      "feature": "first_to_rank_race_type_allR",
+      "importance": 72.86669981479645
+    },
+    {
+      "feature": "peds_16",
+      "importance": 67.50550055503845
+    },
+    {
+      "feature": "peds_34",
+      "importance": 55.50888109207153
+    },
+    {
+      "feature": "peds_47",
+      "importance": 53.87514901161194
+    },
+    {
+      "feature": "peds_30",
+      "importance": 50.85581994056702
+    },
+    {
+      "feature": "peds_35",
+      "importance": 46.79946041107178
+    },
+    {
+      "feature": "peds_2",
+      "importance": 41.03373980522156
+    },
+    {
+      "feature": "peds_33",
+      "importance": 40.258299827575684
+    },
+    {
+      "feature": "peds_38",
+      "importance": 39.790629863739014
+    },
+    {
+      "feature": "peds_17",
+      "importance": 36.92473006248474
+    },
+    {
+      "feature": "weather_雨",
+      "importance": 34.6774697303772
+    },
+    {
+      "feature": "peds_7",
+      "importance": 29.697749853134155
+    },
+    {
+      "feature": "ground_state_重",
+      "importance": 27.61935019493103
+    },
+    {
+      "feature": "ground_state_不良",
+      "importance": 26.747130393981934
+    },
+    {
+      "feature": "peds_22",
+      "importance": 17.07864999771118
+    },
+    {
+      "feature": "peds_32",
+      "importance": 13.565680027008057
+    },
+    {
+      "feature": "peds_31",
+      "importance": 11.197600364685059
+    },
+    {
+      "feature": "peds_46",
+      "importance": 8.460259795188904
+    },
+    {
+      "feature": "性_セ",
+      "importance": 6.065169811248779
+    },
+    {
+      "feature": "peds_6",
+      "importance": 5.262350082397461
+    },
+    {
+      "feature": "final_to_rank_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "diff_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_corner_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "final_corner_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_to_rank_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_to_final_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "n_horses",
+      "importance": 0.0
+    },
+    {
+      "feature": "rank_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "prize_開催_5R",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_corner_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "diff_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "prize_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "rank_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "final_to_rank_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "final_to_rank_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "rank_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "prize_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "diff_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_corner_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "final_corner_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_to_rank_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_to_final_開催_allR",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_to_final_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "first_to_rank_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "final_corner_開催_9R",
+      "importance": 0.0
+    },
+    {
+      "feature": "peds_14",
+      "importance": 0.0
+    },
+    {
+      "feature": "peds_15",
+      "importance": 0.0
+    },
+    {
+      "feature": "weather_雪",
+      "importance": 0.0
+    },
+    {
+      "feature": "weather_小雪",
+      "importance": 0.0
+    },
+    {
+      "feature": "weather_小雨",
+      "importance": 0.0
+    }
+  ],
+  "best_params": {
+    "num_leaves": 45,
+    "learning_rate": 0.05388108577817234,
+    "feature_fraction": 0.42063311266913106,
+    "bagging_fraction": 0.9455922412472693,
+    "bagging_freq": 2,
+    "min_child_samples": 68,
+    "reg_alpha": 6.388511557344611e-06,
+    "reg_lambda": 0.0004793052550782129,
+    "max_depth": 8,
+    "min_split_gain": 0.18485445552552704
+  }
+}
