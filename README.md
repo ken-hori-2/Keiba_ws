@@ -4,6 +4,31 @@
 
 Keiba_WSは、機械学習を活用した競馬予測システムの研究開発プロジェクトです。研究段階のアンサンブル学習アプローチ（v1）から、リアルタイムデータスクレイピングによる実用的予測システム（v2）、そして本格的なWebアプリケーション（app）まで、段階的な技術進化と実用化を記録しています。
 
+## 競馬AI App
+
+### 🎬デモ
+
+<!-- ![Demo](./assets/images/demo.gif) -->
+
+#### 🎯 競馬AI予測システム: リアルタイム予測
+
+![競馬予測デモ](./assets/images/keiba_demo.gif)
+
+*競馬AI予測システムのプレビュー - より詳しく見るには下のボタンをクリック*
+
+[![競馬予測デモ](https://img.shields.io/badge/🎬-予測デモ動画を見る-blue?style=for-the-badge&logo=youtube)](https://github.com/user-attachments/assets/43d6ecd1-c99d-43d8-b520-680d53b451ef)
+
+#### 🏆 学習プロセス: モデル訓練と検証
+
+![競馬学習デモ](./assets/images/keiba_demo_train.gif)
+
+*モデル学習プロセスのプレビュー - より詳しく見るには下のボタンをクリック*
+
+[![競馬学習デモ](https://img.shields.io/badge/🎬-学習デモ動画を見る-green?style=for-the-badge&logo=youtube)](https://github.com/user-attachments/assets/8307b18a-9b41-4f93-adeb-17d992e11cdb)
+
+*予測デモでは、実際のレースIDを入力して競馬AI予測システムがリアルタイムで予測結果を表示する様子をご覧いただけます。学習デモでは、機械学習モデルが過去データから学習し、予測精度を向上させるプロセスを確認できます。*
+
+
 ### 🎯 プロジェクトの目標
 
 - 📊 **高精度予測**: 機械学習による競馬結果の高精度予測
