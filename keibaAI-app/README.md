@@ -2,7 +2,7 @@
 
 ## 概要
 
-このシステムは機械学習（LightGBM）を使用して競馬の勝敗予測を行うAIシステムです。2019年から2022年の過去データで学習し、2023年以降の新しいレースに対して予測を実行できます。
+このシステムは機械学習（LightGBM）を使用して競馬の勝敗予測を行うAIシステムです。2019年から2022年の過去データで学習し、2023年以降の新しいレースに対して予測を実行できます。StreamlitベースのWebアプリケーションとして提供され、直感的なユーザーインターフェースで予測結果を確認できます。
 
 ## システムの特徴
 
@@ -21,7 +21,13 @@
 
 ## 使用方法
 
-### 1. 基本的な実行
+### 1. Streamlitアプリの起動（推奨）
+```bash
+streamlit run app.py
+```
+ブラウザで自動的にアプリが開き、直感的なインターフェースで予測を実行できます。
+
+### 2. 基本的な実行（コマンドライン）
 ```bash
 python horse_racing_ai_refactored.py
 ```
@@ -176,7 +182,7 @@ selected_number = 1  # 1-24の範囲で選択
 
 ### 必要なライブラリ
 ```bash
-pip install pandas numpy scikit-learn lightgbm matplotlib seaborn tqdm requests beautifulsoup4
+pip install streamlit pandas numpy scikit-learn lightgbm matplotlib seaborn tqdm requests beautifulsoup4
 ```
 
 ### データファイル
